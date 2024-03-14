@@ -1,0 +1,1 @@
+ALTER TABLE encurtador_url ADD COLUMN acessos INT NOT NULL DEFAULT 0 AFTER codigo;

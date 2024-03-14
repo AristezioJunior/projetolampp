@@ -1,0 +1,16 @@
+package com.aristezio.lampp.domain.model;
+
+import lombok.Data;
+
+@Data
+public class EncurtadorUrl {
+
+	private long id;
+	
+	private String url;
+	
+	private String codigo;
+	
+	private EstatisticaTempo tempo; 
+	
+}

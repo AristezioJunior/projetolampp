@@ -1,0 +1,37 @@
+package com.aristezio.lampp.api.controller;
+
+import java.util.List;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.aristezio.lampp.domain.model.EncurtadorUrl;
+import com.aristezio.lampp.domain.repository.EncurtadorUrlRepository;
+
+import lombok.AllArgsConstructor;
+
+@AllArgsConstructor
+@RestController
+public class EncurtadorUrlController {
+
+	//@Autowired   
+	EncurtadorUrlRepository repository;
+	
+	@GetMapping("/urls")
+	public List<EncurtadorUrl> listar() {
+		return repository.findAll();
+		
+	}
+	
+	@GetMapping("/urls/encurtadorUrlId")
+	public List<EncurtadorUrl> buscar(@PathVariable Long encurtadorUrlId) {
+		Optional<EncurtadorUrl> encurtadorUrl = repository.findById(encurtadorUrlId);
+		
+	}
+	
+	
+	
+	
+	
+}

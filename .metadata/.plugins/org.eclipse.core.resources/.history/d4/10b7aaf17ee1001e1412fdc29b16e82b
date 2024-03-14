@@ -1,0 +1,23 @@
+package com.aristezio.lampp.domain.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.aristezio.lampp.domain.model.EncurtadorUrl;
+import com.aristezio.lampp.domain.repository.EncurtadorUrlRepository;
+
+@Service
+public class EncurtadorUrlService {
+
+	@Autowired
+	private EncurtadorUrlRepository repository;
+
+
+	
+	public EncurtadorUrl salvar(EncurtadorUrl encurtadorUrl) {
+
+		
+	}
+	
+	
+}

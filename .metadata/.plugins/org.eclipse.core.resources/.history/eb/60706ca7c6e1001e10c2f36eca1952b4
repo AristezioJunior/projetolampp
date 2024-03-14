@@ -1,0 +1,37 @@
+package com.aristezio.lampp.domain.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.aristezio.lampp.domain.exception.NegocioException;
+import com.aristezio.lampp.domain.model.EncurtadorUrl;
+import com.aristezio.lampp.domain.repository.EncurtadorUrlRepository;
+
+@Service
+public class EncurtadorUrlService {
+
+	@Autowired
+	private EncurtadorUrlRepository repository;
+
+
+	@Transactional
+	public EncurtadorUrl salvar(EncurtadorUrl encurtadorUrl) {
+		Long inicioDoTempo = System.currentTimeMillis();
+        Long finalTempo = System.currentTimeMillis();
+        Long resultadoTempo = finalTempo - inicioDoTempo; 
+        System.out.println(resultadoTempo.toString() + "ms");
+		//verificando se o codigo já foi usado
+        boolean codigoEmUso = repository.findByCodigo(encurtadorUrl.getCodigo())
+                .filter(p -> !p.equals(encurtadorUrl))
+                .isPresent();
+        
+        if(codigoEmUso) {
+        	 throw new NegocioException("{ERR_CODE: 001, Description:Código ALREADY EXISTS}");
+        }
+        
+		return repository.save(encurtadorUrl);
+	}
+	
+	
+}

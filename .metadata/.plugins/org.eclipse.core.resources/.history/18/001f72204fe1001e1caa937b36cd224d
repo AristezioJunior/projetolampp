@@ -1,0 +1,13 @@
+package com.aristezio.lampp.domain.model;
+
+public class EncurtadorUrl {
+
+	private long id;
+	
+	private String url;
+	
+	private String codigo;
+	
+	private EstatisticaTempo tempo; 
+	
+}

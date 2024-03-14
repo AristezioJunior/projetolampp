@@ -1,0 +1,54 @@
+package com.aristezio.lampp;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.anyString;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
+
+import java.util.Optional;
+
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.junit.jupiter.MockitoExtension;
+
+import com.aristezio.lampp.domain.model.EncurtadorUrl;
+import com.aristezio.lampp.domain.repository.EncurtadorUrlRepository;
+import com.aristezio.lampp.domain.service.EncurtadorUrlService;
+
+@ExtendWith(MockitoExtension.class)
+public class EncurtadorUrlTest {
+
+    @Mock
+    private EncurtadorUrlRepository repository;
+
+    @InjectMocks
+    private EncurtadorUrlService service;
+
+    @Test
+    void testSalvar() {
+        // Mock dos dados de entrada
+        EncurtadorUrl encurtadorUrl = new EncurtadorUrl();
+        encurtadorUrl.setUrl("http://example.com");
+        
+        // Mock do retorno do repository
+        when(repository.findByCodigo(anyString())).thenReturn(Optional.empty());
+        when(repository.save(any())).thenReturn(encurtadorUrl);
+        
+        // Teste do método salvar
+        EncurtadorUrl result = service.salvar(encurtadorUrl);
+        
+        // Verifica se o resultado retornado é igual ao esperado
+        assertEquals(encurtadorUrl, result);
+        
+        // Verifica se o método findByCodigo do repository foi chamado
+        verify(repository).findByCodigo(anyString());
+        
+        // Verifica se o método save do repository foi chamado
+        verify(repository).save(any());
+    }
+    
+	
+}

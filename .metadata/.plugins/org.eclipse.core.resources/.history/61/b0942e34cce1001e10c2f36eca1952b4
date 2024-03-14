@@ -1,0 +1,57 @@
+package com.aristezio.lampp.domain.service;
+
+import java.util.UUID;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.aristezio.lampp.domain.exception.NegocioException;
+import com.aristezio.lampp.domain.model.EncurtadorUrl;
+import com.aristezio.lampp.domain.repository.EncurtadorUrlRepository;
+
+@Service
+public class EncurtadorUrlService {
+
+	@Autowired
+	private EncurtadorUrlRepository repository;
+
+
+	@Transactional
+	public EncurtadorUrl salvar(EncurtadorUrl encurtadorUrl) {
+		Long inicioDoTempo = System.currentTimeMillis();
+
+        System.out.println(resultadoTempo.toString() + "ms");
+		//verificando se o codigo já foi usado
+        boolean codigoEmUso = repository.findByCodigo(encurtadorUrl.getCodigo())
+                .filter(p -> !p.equals(encurtadorUrl))
+                .isPresent();
+        
+        if(codigoEmUso) {
+        	 throw new NegocioException("{ERR_CODE: 001, Description:Código ALREADY EXISTS}");
+        }
+        
+        String alias = (encurtadorUrl.getCodigo() != null) ? encurtadorUrl.getCodigo() : geracaoDeCodigoUnico();
+        encurtadorUrl.setCodigo(alias);
+        repository.save(encurtadorUrl);
+        
+        //retornando a nova url, código e tempo
+        EncurtadorUrl novoEncurtadorUrl = new EncurtadorUrl();
+        novoEncurtadorUrl.setCodigo(alias);
+        novoEncurtadorUrl.setUrl("http://urlcurta/" + alias);
+        
+        Long finalTempo = System.currentTimeMillis();
+        Long resultadoTempo = finalTempo - inicioDoTempo;
+        novoEncurtadorUrl.setTempo(resultadoTempo.toString() + "ms");
+        
+        
+		return repository.save(encurtadorUrl);
+	}
+	
+	
+    private String geracaoDeCodigoUnico() {
+
+        return UUID.randomUUID().toString().substring(0, 7); 
+    }
+	
+}

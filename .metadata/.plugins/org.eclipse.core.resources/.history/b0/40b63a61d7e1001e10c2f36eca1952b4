@@ -1,0 +1,10 @@
+package com.aristezio.lampp.domain.model;
+
+import lombok.Data;
+
+@Data
+public class ErrorResponse {
+    private String errCode;
+    private String description;
+	
+}

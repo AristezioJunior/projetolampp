@@ -1,0 +1,75 @@
+package com.aristezio.lampp.api.controller;
+
+import java.util.List;
+import java.util.Optional;
+import java.util.stream.Collectors;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.view.RedirectView;
+
+import com.aristezio.lampp.api.assembler.EncurtadorUrlAssembler;
+import com.aristezio.lampp.api.model.EncurtadorUrlModel;
+import com.aristezio.lampp.domain.model.EncurtadorUrl;
+import com.aristezio.lampp.domain.model.ErrorResponse;
+import com.aristezio.lampp.domain.repository.EncurtadorUrlRepository;
+import com.aristezio.lampp.domain.service.EncurtadorUrlService;
+
+import lombok.AllArgsConstructor;
+
+@AllArgsConstructor
+@RestController
+@RequestMapping("/alias")
+public class RecuperarUrlController {
+
+	@Autowired
+	EncurtadorUrlRepository repository;
+	
+    @Autowired
+    private EncurtadorUrlService service;
+    
+	
+	private final EncurtadorUrlAssembler encurtadorUrlAssembler;
+	
+	@GetMapping("/{codigo}")
+	ResponseEntity<Object> redirectToOriginalUrl(@PathVariable String codigo) {
+        Optional<EncurtadorUrl> encurtadorUrl = repository.findByCodigo(codigo);
+        
+        if (encurtadorUrl.isPresent()) {
+        	EncurtadorUrl url = repository.findByCodigoEquals(codigo);
+        	url.incrementarAcessos();
+        	repository.save(url);
+            return ResponseEntity.status(HttpStatus.FOUND)
+                    .body(new RedirectView(url.getUrlOriginal()));
+        	
+        } else {
+            ErrorResponse errorResponse = new ErrorResponse("002", "SHORTENED URL NOT FOUND");
+            return ResponseEntity.status(HttpStatus.NOT_FOUND)
+                    .body(errorResponse);
+        }
+
+
+    }
+	
+    @GetMapping("/mais-acessadas")
+    public List<EncurtadorUrlModel> listarMaisAcessadas() {
+        // Obter todas as URLs do banco de dados
+        List<EncurtadorUrl> todasUrls = repository.findAll();
+
+        // Ordenar as URLs com base no número de acessos (outra possibilidade seria adicionar um contador de acessos no modelo EncurtadorUrl)
+        List<EncurtadorUrl> urlsOrdenadas = todasUrls.stream()
+                .sorted((url1, url2) -> Integer.compare(url2.getAcessos(), url1.getAcessos())) // Ordem decrescente
+                .limit(10) // Pegar apenas as 10 primeiras
+                .collect(Collectors.toList());
+
+        // Converter as URLs para seus modelos correspondentes
+        return encurtadorUrlAssembler.toCollectionModel(urlsOrdenadas);
+    }
+	
+	
+}

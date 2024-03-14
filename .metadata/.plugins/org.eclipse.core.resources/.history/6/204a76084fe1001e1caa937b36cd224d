@@ -1,0 +1,7 @@
+package com.aristezio.lampp.domain.model;
+
+public class EstatisticaTempo {
+
+	private String tempoDecorrido;
+	
+}

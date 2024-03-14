@@ -1,0 +1,5 @@
+package com.aristezio.lampp.api.model.input;
+
+public class EncurtadorUrlInput {
+
+}

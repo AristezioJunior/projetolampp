@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="EncurtadorUrlTest.testListar" project="projetolampp-api" tests="1" started="1" failures="0" errors="1" ignored="0">
+  <testsuite name="com.aristezio.lampp.EncurtadorUrlTest" time="1.084" displayname="EncurtadorUrlTest" uniqueid="[engine:junit-jupiter]/[class:com.aristezio.lampp.EncurtadorUrlTest]">
+    <testcase name="testListar" classname="com.aristezio.lampp.EncurtadorUrlTest" time="1.084" displayname="testListar()" uniqueid="[engine:junit-jupiter]/[class:com.aristezio.lampp.EncurtadorUrlTest]/[method:testListar()]">
+      <error>org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+Unnecessary stubbings detected.
+Clean &amp; maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -&gt; at com.aristezio.lampp.EncurtadorUrlTest.testListar(EncurtadorUrlTest.java:36)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+	at org.mockito.junit.jupiter.MockitoExtension.afterEach(MockitoExtension.java:192)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
+</error>
+    </testcase>
+  </testsuite>
+</testrun>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="EncurtadorUrlTest.testListar" project="projetolampp-api" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="com.aristezio.lampp.EncurtadorUrlTest" time="1.118" displayname="EncurtadorUrlTest" uniqueid="[engine:junit-jupiter]/[class:com.aristezio.lampp.EncurtadorUrlTest]">
+    <testcase name="testListar" classname="com.aristezio.lampp.EncurtadorUrlTest" time="1.118" displayname="testListar()" uniqueid="[engine:junit-jupiter]/[class:com.aristezio.lampp.EncurtadorUrlTest]/[method:testListar()]"/>
+  </testsuite>
+</testrun>

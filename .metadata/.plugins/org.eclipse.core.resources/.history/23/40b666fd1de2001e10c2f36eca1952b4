@@ -1,0 +1,5 @@
+package com.aristezio.lampp.api.assembler;
+
+public class EncurtadorUrlAcessosAssembler {
+
+}

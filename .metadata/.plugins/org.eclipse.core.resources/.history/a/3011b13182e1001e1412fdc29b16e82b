@@ -1,0 +1,15 @@
+package com.aristezio.lampp.domain.repository;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import com.aristezio.lampp.domain.model.EncurtadorUrl;
+
+@Repository
+public interface EncurtadorUrlRepository extends JpaRepository<EncurtadorUrl, Long>{
+	
+	List<EncurtadorUrl> findByCodigo(String codigo);
+	
+}

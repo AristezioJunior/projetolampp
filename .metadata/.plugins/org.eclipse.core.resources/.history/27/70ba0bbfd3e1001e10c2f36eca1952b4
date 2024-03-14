@@ -1,0 +1,13 @@
+package com.aristezio.lampp.domain.model;
+
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+public class ErroOcorrido {
+
+    private String errCode;
+    private String description;
+	
+}

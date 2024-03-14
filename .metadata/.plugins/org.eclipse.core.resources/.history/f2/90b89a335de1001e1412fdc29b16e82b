@@ -1,0 +1,10 @@
+package com.aristezio.lampp.domain.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.aristezio.lampp.domain.model.EncurtadorUrl;
+
+public interface EncurtadorUrlRepository extends JpaRepository<EncurtadorUrl, Long>{
+	
+
+}

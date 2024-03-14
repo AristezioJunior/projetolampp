@@ -1,0 +1,5 @@
+package com.aristezio.lampp.domain.model;
+
+public class EncurtadorUrl {
+
+}

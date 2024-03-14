@@ -1,0 +1,13 @@
+package com.aristezio.lampp.domain.model;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+import lombok.Data;
+
+@Data
+public class EstatisticaTempo {
+
+
+	private String tempoDecorrido;
+	
+}

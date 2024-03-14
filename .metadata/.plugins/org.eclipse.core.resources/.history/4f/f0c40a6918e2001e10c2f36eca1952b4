@@ -1,0 +1,41 @@
+package com.aristezio.lampp;
+
+import static org.mockito.Mockito.when;
+
+import java.util.Collections;
+
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.junit.jupiter.MockitoExtension;
+
+import com.aristezio.lampp.api.assembler.EncurtadorUrlAssembler;
+import com.aristezio.lampp.api.controller.EncurtadorUrlController;
+import com.aristezio.lampp.domain.repository.EncurtadorUrlRepository;
+import com.aristezio.lampp.domain.service.EncurtadorUrlService;
+
+@ExtendWith(MockitoExtension.class)
+public class EncurtadorUrlTest {
+
+    @Mock
+    private EncurtadorUrlRepository repository;
+
+    @Mock
+    private EncurtadorUrlService service;
+
+    @Mock
+    private EncurtadorUrlAssembler assembler;
+
+    @InjectMocks
+    private EncurtadorUrlController controller;
+
+    @Test
+    void testListar() {
+    	
+    	when(repository.findAll()).thenReturn(Collections.emptyList());
+        
+    }
+    
+	
+}
