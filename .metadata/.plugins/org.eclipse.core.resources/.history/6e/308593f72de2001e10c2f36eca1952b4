@@ -1,0 +1,4 @@
+spring.application.name=projetolampp-api
+spring.datasource.url=jdbc:mysql://localhost/adm_lampp?createDatabaseIfNotExist=true&serverTimezone=UTC
+spring.datasource.username=root
+spring.datasource.password=123456

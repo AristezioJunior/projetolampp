@@ -10,7 +10,7 @@
 	<section name="JavaElementSearchActions">
 	</section>
 	<section name="completion_proposal_size">
-		<item key="size.x" value="440"/>
+		<item key="size.x" value="439"/>
 		<item key="size.y" value="244"/>
 	</section>
 	<section name="quick_assist_proposal_size">
@@ -68,5 +68,11 @@
 		<item key="DIALOG_WIDTH" value="629"/>
 		<item key="DIALOG_HEIGHT" value="656"/>
 		<item key="DIALOG_FONT_NAME" value="1|Ubuntu|11.0|0|GTK|1|"/>
+	</section>
+	<section name="org.eclipse.jdt.internal.ui.typehierarchy.QuickHierarchy">
+		<item key="org.eclipse.jdt.internal.ui.typehierarchy.HierarchyInformationControlDIALOG_WIDTH" value="400"/>
+		<item key="org.eclipse.jdt.internal.ui.typehierarchy.HierarchyInformationControlDIALOG_HEIGHT" value="340"/>
+		<item key="org.eclipse.jdt.internal.ui.typehierarchy.HierarchyInformationControlDIALOG_USE_PERSISTED_SIZE" value="true"/>
+		<item key="org.eclipse.jdt.internal.ui.typehierarchy.HierarchyInformationControlDIALOG_USE_PERSISTED_LOCATION" value="false"/>
 	</section>
 </section>

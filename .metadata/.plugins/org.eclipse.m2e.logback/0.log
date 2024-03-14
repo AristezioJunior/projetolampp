@@ -2292,3 +2292,33 @@
 2024-03-14 13:22:49,419 [Worker-300: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
 2024-03-14 13:22:49,424 [Worker-300: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 5 resources from src/main/resources to target/classes
 2024-03-14 13:22:49,426 [Worker-300: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/aristezio/workspaceLampp/projetolampp-api/src/test/resources
+2024-03-14 14:40:17,733 [Worker-309: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
+2024-03-14 14:40:17,733 [Worker-309: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
+2024-03-14 14:40:17,734 [Worker-309: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/aristezio/workspaceLampp/projetolampp-api/src/test/resources
+2024-03-14 14:43:04,066 [Worker-309: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
+2024-03-14 14:43:04,075 [Worker-309: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
+2024-03-14 14:43:04,082 [Worker-309: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/aristezio/workspaceLampp/projetolampp-api/src/test/resources
+2024-03-14 14:52:29,679 [Worker-314: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
+2024-03-14 14:52:29,680 [Worker-314: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
+2024-03-14 14:52:29,681 [Worker-314: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/aristezio/workspaceLampp/projetolampp-api/src/test/resources
+2024-03-14 15:09:15,203 [Worker-322: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2024-03-14 15:09:15,215 [Worker-322: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
+2024-03-14 15:09:15,219 [Worker-322: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/aristezio/workspaceLampp/projetolampp-api/src/test/resources
+2024-03-14 15:09:42,510 [Worker-322: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2024-03-14 15:09:42,520 [Worker-322: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
+2024-03-14 15:09:42,524 [Worker-322: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/aristezio/workspaceLampp/projetolampp-api/src/test/resources
+2024-03-14 16:09:01,885 [Worker-1: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2024-03-14 16:24:53,072 [Worker-18: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.aristezio.lampp:projetolampp-api:0.0.1-SNAPSHOT @ /home/aristezio/workspaceLampp/projetolampp-api/pom.xml.
+2024-03-14 16:24:53,962 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2024-03-14 16:24:54,013 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 5 resources from src/main/resources to target/classes
+2024-03-14 16:24:54,028 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/aristezio/workspaceLampp/projetolampp-api/src/test/resources
+2024-03-14 16:25:41,138 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
+2024-03-14 16:25:41,140 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
+2024-03-14 16:25:41,144 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/aristezio/workspaceLampp/projetolampp-api/src/test/resources
+2024-03-14 16:39:35,314 [Worker-26: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.aristezio.lampp:projetolampp-api:0.0.1-SNAPSHOT @ /home/aristezio/workspaceLampp/projetolampp-api/pom.xml.
+2024-03-14 16:39:35,829 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
+2024-03-14 16:39:35,831 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
+2024-03-14 16:39:35,837 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/aristezio/workspaceLampp/projetolampp-api/src/test/resources
+2024-03-14 16:41:18,603 [Worker-30: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
+2024-03-14 16:41:18,604 [Worker-30: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
+2024-03-14 16:41:18,607 [Worker-30: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/aristezio/workspaceLampp/projetolampp-api/src/test/resources
